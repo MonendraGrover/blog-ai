@@ -216,59 +216,9 @@ a:hover {{ border-bottom-color: var(--indigo); }}
 }}
 
 /* ---------- sidebar ---------- */
-[data-testid="stSidebar"] {
-    background: #EAEFE7;
-    border-right: 1px solid var(--rule);
-}
+[data-testid="stSidebar"] {{ background: #EAEFE7; border-right: 1px solid var(--rule); }}
+[data-testid="stSidebarNav"] a span {{ font-family: var(--mono); font-size: .78rem; letter-spacing: .06em; }}
 
-/* Navigation links */
-[data-testid="stSidebarNav"] a {
-    color: var(--ink) !important;
-    text-decoration: none !important;
-}
-
-/* Navigation text */
-[data-testid="stSidebarNav"] a span {
-    font-family: var(--mono) !important;
-    font-size: .78rem !important;
-    letter-spacing: .06em !important;
-    color: var(--ink) !important;
-}
-
-/* Selected page */
-[data-testid="stSidebarNav"] a[aria-current="page"] {
-    background: rgba(46,107,79,.08) !important;
-    border-radius: 4px;
-}
-
-[data-testid="stSidebarNav"] a[aria-current="page"] span {
-    color: var(--ink) !important;
-    font-weight: 700 !important;
-}
-
-/* Hover effect */
-[data-testid="stSidebarNav"] a:hover {
-    background: rgba(46,107,79,.05) !important;
-    border-radius: 4px;
-}
-
-[data-testid="stSidebarNav"] a:hover span {
-    color: var(--ink) !important;
-}
-
-/* Sidebar headers */
-[data-testid="stSidebar"] h1,
-[data-testid="stSidebar"] h2,
-[data-testid="stSidebar"] h3,
-[data-testid="stSidebar"] h4,
-[data-testid="stSidebar"] h5,
-[data-testid="stSidebar"] h6,
-[data-testid="stSidebar"] label,
-[data-testid="stSidebar"] p,
-[data-testid="stSidebar"] span,
-[data-testid="stSidebar"] div {
-    color: var(--ink) !important;
-}
 /* ---------- footer ---------- */
 .sitefooter {{
   margin-top: 46px; border-top: 2px solid var(--ink); padding: 16px 0 26px 0;
