@@ -215,9 +215,48 @@ a:hover {{ border-bottom-color: var(--indigo); }}
   font-family: var(--mono); font-size: .82rem; border-radius: 2px;
 }}
 
-/* ---------- sidebar ---------- */
-[data-testid="stSidebar"] {{ background: #EAEFE7; border-right: 1px solid var(--rule); }}
-[data-testid="stSidebarNav"] a span {{ font-family: var(--mono); font-size: .78rem; letter-spacing: .06em; }}
+/* ---------- sidebar ----------
+   FIX: the background was light (#EAEFE7) but the text color was left to
+   Streamlit's active theme. On the dark theme the nav links render as white
+   text on that light ground — invisible. Force every sidebar element to ink,
+   style the nav links explicitly, and mark the active page in moss. */
+[data-testid="stSidebar"] {{
+  background: #EAEFE7 !important;
+  border-right: 1px solid var(--rule);
+}}
+[data-testid="stSidebar"] * {{ color: var(--ink) !important; }}
+
+[data-testid="stSidebarNav"] a {{
+  border-bottom: none;
+  border-radius: 2px;
+  margin: 2px 8px;
+  padding: 8px 12px;
+}}
+[data-testid="stSidebarNav"] a span {{
+  font-family: var(--mono) !important;
+  font-size: .78rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--ink) !important;
+}}
+[data-testid="stSidebarNav"] a:hover {{
+  background: rgba(46,107,79,.10);
+}}
+[data-testid="stSidebarNav"] a:hover span {{ color: var(--moss) !important; }}
+
+/* active page */
+[data-testid="stSidebarNav"] a[aria-current="page"] {{
+  background: rgba(46,107,79,.12);
+  border-left: 3px solid var(--moss);
+}}
+[data-testid="stSidebarNav"] a[aria-current="page"] span {{
+  color: var(--moss) !important;
+  font-weight: 600;
+}}
+
+/* keep the sidebar collapse/expand arrow visible too */
+[data-testid="stSidebarCollapseButton"] svg,
+[data-testid="stSidebar"] svg {{ fill: var(--ink); color: var(--ink) !important; }}
 
 /* ---------- footer ---------- */
 .sitefooter {{
