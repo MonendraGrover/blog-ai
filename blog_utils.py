@@ -191,22 +191,47 @@ def find_post(slug: str) -> Post | None:
     return next((p for p in all_posts() if p.slug == slug), None)
 
 
+# ─────────────────────────────────────────────────────────────────────────────
+# Inline PDF viewer
+#
+# Order of attempts:
+#   1. st.pdf            — built into Streamlit >= 1.45, the cleanest option
+#   2. streamlit-pdf-viewer — pdf.js component, works in every browser
+#                             (pip install streamlit-pdf-viewer)
+#   3. friendly fallback  — points the reader at the Download button
+#
+# The old base64 <object data="data:application/pdf..."> approach was removed:
+# Chrome and Edge block PDFs loaded from data: URLs, which is why previews
+# showed up blank.
+# ─────────────────────────────────────────────────────────────────────────────
 def render_pdf(post: Post, height: int = 820) -> None:
-    """Inline viewer. Uses st.pdf where available, otherwise an embedded object."""
+    """Inline viewer for a post's PDF."""
+    # 1. Native viewer (Streamlit >= 1.45)
+    if hasattr(st, "pdf"):
+        try:
+            st.pdf(str(post.path), height=height)
+            return
+        except Exception:
+            pass
+
+    # 2. pdf.js component — immune to the Chrome/Edge data-URL block
     try:
-        st.pdf(str(post.path), height=height)
+        from streamlit_pdf_viewer import pdf_viewer
+
+        pdf_viewer(
+            post.read_bytes(),
+            height=height,
+            key=f"pdfviewer_{post.slug}",
+        )
         return
+    except ImportError:
+        pass
     except Exception:
         pass
 
-    import base64
-
-    b64 = base64.b64encode(post.read_bytes()).decode()
-    st.markdown(
-        f'<object data="data:application/pdf;base64,{b64}" type="application/pdf" '
-        f'width="100%" height="{height}px" style="border:1px solid #D6DED2;border-radius:2px;">'
-        f'<p style="font-family:IBM Plex Mono,monospace;font-size:.8rem;">'
-        f'This browser will not display PDFs inline. Use the download button to read it.</p>'
-        f"</object>",
-        unsafe_allow_html=True,
+    # 3. Last resort — tell the reader what to do instead of showing a blank box
+    st.info(
+        "Inline preview is not available here. "
+        "Install it with `pip install streamlit-pdf-viewer` (or upgrade Streamlit "
+        "to 1.45+), or use the **Download PDF** button above to read this blog."
     )
