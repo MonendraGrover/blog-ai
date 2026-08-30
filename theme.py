@@ -17,8 +17,8 @@ Type: Bricolage Grotesque (display) / Source Serif 4 (body) / IBM Plex Mono (lab
 import os
 import streamlit as st
 
-SITE_TITLE = "BioForge"
-SITE_TAGLINE = "Forging the Future of AI and Biology."
+SITE_TITLE = "Rethinking Biology"
+SITE_TAGLINE = "A Journey from Molecules to Information."
 
 INK = "#12211B"
 PAPER = "#F1F4EE"
