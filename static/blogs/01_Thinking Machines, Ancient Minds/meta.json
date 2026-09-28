@@ -1,16 +1,72 @@
 {
-   "What Ancient India Thought the Mind Actually Is.pdf": {
-    "title": "What Ancient India Thought the Mind Actually Is",
-    "summary": "Exploring how the ancient Indian concepts of Manas, Buddhi, Chitta, and Ahamkara can inspire next-generation AI cognitive architectures.",
+  "01 Why Biology Needs a New Information Theory.pdf": {
+    "title": "Rethinking Biology 1: Why Biology Needs a New Information Theory",
+    "summary": "Opening the Rethinking Biology series by arguing that classical information theory cannot fully capture how living systems store, use and create meaning from information.",
     "author": "Monendra Grover",
-    "date": "2026-08-05",
-    "tags": ["cognitive architecture","Indian philosophy","artificial intelligence"]
-  }, 
-  "Why AI Needs New Cognitive Architectures.pdf": {
-    "title": "Why AI Needs New Cognitive Architectures",
-    "summary": "Exploring the future of AI through cognitive architectures inspired by biology, neuroscience, and ancient Indian philosophy.",
+    "date": "2026-06-01",
+    "tags": ["Rethinking Biology", "information theory", "theoretical biology"]
+  },
+  "02 Is the Cell Really Just a Bag of Chemicals.pdf": {
+    "title": "Rethinking Biology 2: Is the Cell Really Just a Bag of Chemicals?",
+    "summary": "Questioning the purely chemical view of the cell and asking what organisation, regulation and information add to our understanding of life.",
     "author": "Monendra Grover",
-    "date": "2026-08-04",
-    "tags": ["cognitive architecture","Indian philosophy","future of AI"]
+    "date": "2026-06-05",
+    "tags": ["Rethinking Biology", "cell biology", "systems biology"]
+  },
+  "03 Can a Cell Compute.pdf": {
+    "title": "Rethinking Biology 3: Can a Cell Compute?",
+    "summary": "Why intelligence may begin long before the brain: exploring how single cells sense, process and respond to information in ways that resemble computation.",
+    "author": "Monendra Grover",
+    "date": "2026-06-09",
+    "tags": ["Rethinking Biology", "cellular computation", "biological intelligence"]
+  },
+  "04 The Quiet Revolution Called Quantum Biology.pdf": {
+    "title": "Rethinking Biology 4: The Quiet Revolution Called Quantum Biology",
+    "summary": "An introduction to quantum biology and the growing evidence that quantum effects may play a role in processes such as photosynthesis, enzyme action and sensing.",
+    "author": "Monendra Grover",
+    "date": "2026-06-13",
+    "tags": ["Rethinking Biology", "quantum biology", "biophysics"]
+  },
+  "05 From Chemistry to Information Processing.pdf": {
+    "title": "Rethinking Biology 5: From Chemistry to Information Processing",
+    "summary": "Tracing the shift from seeing life as chemistry to seeing it as information processing, and what that change of view means for biology.",
+    "author": "Monendra Grover",
+    "date": "2026-06-17",
+    "tags": ["Rethinking Biology", "information processing", "molecular biology"]
+  },
+  "06 Does Biology Compute Like Artificial Intelligence.pdf": {
+    "title": "Rethinking Biology 6: Does Biology Compute Like Artificial Intelligence?",
+    "summary": "Comparing how living systems and artificial intelligence process information, and where the similarities and differences between them lie.",
+    "author": "Monendra Grover",
+    "date": "2026-06-21",
+    "tags": ["Rethinking Biology", "artificial intelligence", "biological computation"]
+  },
+  "07 Is Intelligence Older Than Brains.pdf": {
+    "title": "Rethinking Biology 7: Is Intelligence Older Than Brains?",
+    "summary": "Examining the idea that intelligent, adaptive behaviour appears in organisms without nervous systems, long before brains evolved.",
+    "author": "Monendra Grover",
+    "date": "2026-06-25",
+    "tags": ["Rethinking Biology", "basal cognition", "evolution"]
+  },
+  "08 Can a Collective Think.pdf": {
+    "title": "Rethinking Biology 8: Can a Collective Think?",
+    "summary": "Exploring collective intelligence in biological systems, from cell populations to colonies, and whether groups can process information as a whole.",
+    "author": "Monendra Grover",
+    "date": "2026-06-29",
+    "tags": ["Rethinking Biology", "collective intelligence", "emergence"]
+  },
+  "09 From Collective Intelligence to Consciousness.pdf": {
+    "title": "Rethinking Biology 9: From Collective Intelligence to Consciousness",
+    "summary": "Where does experience begin? Following the path from collective intelligence towards the question of consciousness in living systems.",
+    "author": "Monendra Grover",
+    "date": "2026-07-03",
+    "tags": ["Rethinking Biology", "consciousness", "collective intelligence"]
+  },
+  "10 Why I Think Biology Needs a New Theory.pdf": {
+    "title": "Rethinking Biology 10: Why I Think Biology Needs a New Theory",
+    "summary": "Closing the series by drawing together molecular biology, bioinformatics, quantum biology and information into the case for a new theory of biology.",
+    "author": "Monendra Grover",
+    "date": "2026-07-07",
+    "tags": ["Rethinking Biology", "theoretical biology", "bioinformatics"]
   }
 }
