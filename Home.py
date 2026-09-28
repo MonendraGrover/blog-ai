@@ -14,7 +14,7 @@ def page_title(stem: str) -> str:
 
 
 # About is the home page
-pages = [st.Page(HOME_PAGE, title="About", default=True)]
+pages = [st.Page(HOME_PAGE, title="Home", default=True)]
 
 # Every other page in pages/ is added automatically, in file-name order
 for file in sorted((ROOT / "pages").glob("*.py")):
