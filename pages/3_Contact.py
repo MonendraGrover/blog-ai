@@ -13,11 +13,7 @@ theme.masthead()
 
 theme.field_label("Get in touch")
 st.markdown("# Contact")
-st.markdown(
-    "<p style='max-width:62ch;'>Questions about a blog, a request for the underlying data, or "
-    "a correction — write to whichever office fits best.</p>",
-    unsafe_allow_html=True,
-)
+
 st.write("")
 
 PHOTO = Path("static/images/Monendra_grover.jpeg")
@@ -41,7 +37,7 @@ OFFICES = [
     {
         "name": "Monendra Grover",
         "role": "Principal Scientist",
-        "unit": "Discipline of Bioinformatics, Graduate School<br>ICAR-Indian Agricultural Research Institute<br>Pusa, New Delhi 110012",
+        "unit": "Division of Agricultural Bioinformatics, Graduate School<br>ICAR-Indian Agricultural Research Institute<br>Pusa, New Delhi 110012",
         "mail": "monendra.grover@gmail.com",
     },
 ]
